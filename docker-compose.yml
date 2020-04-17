@@ -1,0 +1,19 @@
+version: '3'
+
+services: 
+
+    mirror:
+        build: .
+        command: bash mirrorbuild.sh
+        volumes:
+            - "./mirror:/mirror"
+
+    server:
+        build:
+            context: .
+            dockerfile: nginx.Dockerfile
+        command: [nginx-debug, '-g', 'daemon off;']
+        volumes:
+            - "./mirror/mirror:/mirror:ro"
+        ports:
+            - "8080:80"
