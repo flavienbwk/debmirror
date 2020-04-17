@@ -5,8 +5,9 @@
         <img src="https://travis-ci.com/flavienbwk/debmirror.svg?branch=master"/>
     </a>
 </p>
-<p align="center">Dockerized [debmirror](https://help.ubuntu.com/community/Debmirror) script for mirroring + serving</p>
-<p align="center">Status : tested & working :heavy_check_mark:</p>
+Dockerized [debmirror](https://help.ubuntu.com/community/Debmirror) script for mirroring + serving
+
+Status : tested & working :heavy_check_mark:</p>
 
 TL;DR : This repository allows you to create & update your own Ubuntu or Debian mirror. You can then use it offline.
 
