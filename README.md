@@ -23,7 +23,17 @@ TL;DR : This repository allows you to create & update your own Ubuntu or Debian 
     docker-compose up mirror
     ```
 
-> This repository is shipped with the Ubuntu 18.04 default configuration (expect ~137G to be downloaded)
+    > This repository is shipped with the Ubuntu 18.04 default configuration (expect ~137G to be downloaded)
+
+3. (optional) Add a CRON job to keep your mirror up to date :
+
+    After typing `crontab -e` in your shell, add :
+
+    ```cron
+    0 */12 * * * docker-compose -f /path/to/debmirror/docker-compose.yml up mirror > /path/to/debmirror/logs/cron.log 2>&1
+    ```
+
+    > This CRON job will run every 12th hour
 
 ## Serving
 
